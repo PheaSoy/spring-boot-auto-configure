@@ -1,0 +1,8 @@
+book:
+  service:
+    title: Cloud Native Java
+    price: 50
+    author: Jose Long
+#logging:
+#  level:
+#   org.springframework: DEBUG
