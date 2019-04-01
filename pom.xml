@@ -59,6 +59,7 @@
         <module>book-spring-boot-autoconfigure</module>
         <module>book-spring-boot-starter</module>
         <module>book-sample-application</module>
+        <module>book-pipeline-ready</module>
     </modules>
 
     <build>

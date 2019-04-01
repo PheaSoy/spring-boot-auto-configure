@@ -3,6 +3,8 @@ book:
     title: Cloud Native Java
     price: 50
     author: Jose Long
-#logging:
-#  level:
-#   org.springframework: DEBUG
+management:
+  endpoints:
+    web:
+      exposure:
+        include: heapdump,liquibase,loggers,prometheus,threaddump,info,metrics,health

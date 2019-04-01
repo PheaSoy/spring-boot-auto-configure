@@ -11,10 +11,13 @@ public class BookService {
         this.bookConfig = bookConfig;
     }
 
-    public String getContent(){
-        String message = String.format("This is the book with tile: %s and price %s and author %s",
-                bookConfig.get(BOOK_TITLE),bookConfig.get(BOOK_price),bookConfig.get(BOOK_AUTHOR));
-        return message;
+    public Book getContent(){
+        Book book = new Book(
+                bookConfig.get(BOOK_TITLE).toString(),
+                bookConfig.get(BOOK_AUTHOR).toString(),
+                bookConfig.get(BOOK_price).toString());
+        return book;
+
     }
 
 }

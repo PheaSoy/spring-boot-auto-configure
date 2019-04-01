@@ -1,5 +1,6 @@
 package book;
 
+import com.ascendomey.td.book.Book;
 import com.ascendomey.td.book.BookConfig;
 import com.ascendomey.td.book.BookService;
 import org.junit.jupiter.api.Assertions;
@@ -21,8 +22,6 @@ public class BookServiceTest {
 
     BookConfig bookConfig = new BookConfig();
 
-    Optional<String> ok = Optional.ofNullable("ok");
-
     @BeforeEach
     public void setUp(){
         bookConfig.put(BOOK_TITLE,"Cloud Native Java");
@@ -34,11 +33,10 @@ public class BookServiceTest {
     @Test
     @DisplayName("Test return book content should ok.")
     public void testOK(){
-        String content = bookService.getContent();
+        Book book = bookService.getContent();
         assertAll("Should return all matched",
-                () -> assertTrue(content.contains("Cloud Native Java")),
-                () -> assertTrue(content.contains("Josh Long"))
+                () -> assertEquals(book.getTitle(),"Cloud Native Java"),
+                () -> assertEquals(book.getAuthor(),"Josh Long")
         );
-
     }
 }

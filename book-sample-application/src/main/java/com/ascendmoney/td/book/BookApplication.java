@@ -1,6 +1,8 @@
 package com.ascendmoney.td.book;
 
 import com.ascendmoney.td.autoconfigure.BookServiceAutoConfiguration;
+import com.ascendmoney.td.server.config.EnablePipelineReady;
+import com.ascendomey.td.book.Book;
 import com.ascendomey.td.book.BookService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -17,6 +19,8 @@ import org.springframework.context.annotation.Import;
 ////@Import(BookServiceAutoConfiguration.class)
 
 @SpringBootApplication
+@EnableBookStore
+@EnablePipelineReady
 public class BookApplication implements CommandLineRunner {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(BookApplication.class);
@@ -24,15 +28,20 @@ public class BookApplication implements CommandLineRunner {
     @Autowired
     private BookService bookService;
 
-    public static void main(String args[]){
+    @Autowired
+    private BookStoreService bookStoreService;
+
+    public static void main(String args[]) {
         SpringApplication.run(BookApplication.class);
 
     }
 
     @Override
     public void run(String... strings) throws Exception {
-        String content = bookService.getContent();
-        LOGGER.info("Content: {}",content);
-
+        Book content = bookService.getContent();
+        LOGGER.info("Book Content: {}", content);
+        BookStore bookStore = bookStoreService.storeInfo();
+        LOGGER.info("BookStore:{}", bookStore);
     }
+
 }

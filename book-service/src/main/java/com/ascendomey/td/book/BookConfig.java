@@ -4,6 +4,4 @@ import java.util.Properties;
 
 public class BookConfig extends Properties {
 
-
-
 }

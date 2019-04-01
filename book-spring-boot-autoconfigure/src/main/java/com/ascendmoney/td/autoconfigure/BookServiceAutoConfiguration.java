@@ -9,6 +9,7 @@ import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Lazy;
 
 import static com.ascendomey.td.book.BookConfigParams.*;
 
@@ -16,14 +17,13 @@ import static com.ascendomey.td.book.BookConfigParams.*;
 @ConditionalOnClass(BookService.class)
 @EnableConfigurationProperties(BookProperties.class)
 public class BookServiceAutoConfiguration {
-
     @Autowired
     BookProperties bookProperties;
 
     @Bean
     @ConditionalOnMissingBean
     public BookConfig bookConfig(){
-
+        System.out.println("Initialized bean book config");
         String title = bookProperties.getTitle() == null? "Default title": bookProperties.getTitle();
         String author = bookProperties.getAuthor()==null? "Default author": bookProperties.getAuthor();
         String price = bookProperties.getPrice()==null? "0.00": bookProperties.getPrice();
@@ -38,7 +38,9 @@ public class BookServiceAutoConfiguration {
     @ConditionalOnMissingBean
     @Bean
     BookService bookService(BookConfig bookConfig){
+        System.out.println("Initialized bean book BookService");
         BookService bookService = new BookService(bookConfig);
         return bookService;
     }
+
 }

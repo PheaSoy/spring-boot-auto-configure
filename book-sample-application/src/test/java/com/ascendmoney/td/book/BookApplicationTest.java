@@ -1,5 +1,6 @@
 package com.ascendmoney.td.book;
 
+import com.ascendomey.td.book.Book;
 import com.ascendomey.td.book.BookService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -9,6 +10,7 @@ import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import static org.junit.jupiter.api.Assertions.assertAll;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @SpringBootTest(classes = BookApplication.class)
@@ -21,10 +23,10 @@ public class BookApplicationTest {
 
     @Test
     public void testReturnBookMatchWithConfiguration(){
-        String content = bookService.getContent();
+        Book book = bookService.getContent();
         assertAll("Should return all matched",
-                () -> assertTrue(content.contains("Spring In Action")),
-                () -> assertTrue(content.contains("100$"))
+                () -> assertEquals(book.getTitle(),"Cloud Native Java"),
+                () -> assertEquals(book.getAuthor(),"Josh Long")
         );
     }
 }
