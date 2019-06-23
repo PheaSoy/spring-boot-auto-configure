@@ -1,7 +1,6 @@
-package com.ascendmoney.td.book;
+package org.soyphea.book;
 
-import com.ascendomey.td.book.Book;
-import com.ascendomey.td.book.BookService;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

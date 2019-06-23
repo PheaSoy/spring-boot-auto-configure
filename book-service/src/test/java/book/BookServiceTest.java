@@ -1,18 +1,15 @@
 package book;
 
-import com.ascendomey.td.book.Book;
-import com.ascendomey.td.book.BookConfig;
-import com.ascendomey.td.book.BookService;
-import org.junit.jupiter.api.Assertions;
+import org.soyphea.book.Book;
+import org.soyphea.book.BookConfig;
+import org.soyphea.book.BookService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.junit.jupiter.MockitoExtension;
 
-import java.util.Optional;
-
-import static com.ascendomey.td.book.BookConfigParams.*;
+import static org.soyphea.book.BookConfigParams.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 @ExtendWith(MockitoExtension.class)

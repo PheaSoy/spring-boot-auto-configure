@@ -1,6 +1,5 @@
-package com.ascendmoney.td.book;
+package org.soyphea.book;
 
-import com.ascendomey.td.book.Book;
 
 import java.time.LocalDate;
 

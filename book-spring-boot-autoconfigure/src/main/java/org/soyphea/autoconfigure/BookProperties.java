@@ -1,4 +1,4 @@
-package com.ascendmoney.td.autoconfigure;
+package org.soyphea.autoconfigure;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 

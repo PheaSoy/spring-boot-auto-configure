@@ -1,4 +1,4 @@
-package com.ascendomey.td.book;
+package org.soyphea.book;
 
 public class BookConfigParams {
 

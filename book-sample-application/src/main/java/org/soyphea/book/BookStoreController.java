@@ -1,4 +1,4 @@
-package com.ascendmoney.td.book;
+package org.soyphea.book;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;

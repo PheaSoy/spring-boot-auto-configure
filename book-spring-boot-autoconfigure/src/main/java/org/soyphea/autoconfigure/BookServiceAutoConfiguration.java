@@ -1,17 +1,16 @@
-package com.ascendmoney.td.autoconfigure;
+package org.soyphea.autoconfigure;
 
 
-import com.ascendomey.td.book.BookConfig;
-import com.ascendomey.td.book.BookService;
+import org.soyphea.book.BookConfig;
+import org.soyphea.book.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Lazy;
 
-import static com.ascendomey.td.book.BookConfigParams.*;
+import static org.soyphea.book.BookConfigParams.*;
 
 @Configuration
 @ConditionalOnClass(BookService.class)

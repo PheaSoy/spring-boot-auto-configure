@@ -1,4 +1,4 @@
-package com.ascendomey.td.book;
+package org.soyphea.book;
 
 import java.util.Properties;
 

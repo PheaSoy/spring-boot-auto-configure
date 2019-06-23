@@ -1,2 +1,2 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-com.ascendmoney.td.autoconfigure.BookServiceAutoConfiguration
+org.soyphea.autoconfigure.BookServiceAutoConfiguration
