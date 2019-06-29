@@ -86,3 +86,4 @@ public class BookServiceAutoConfigureTest {
     }
 }
 ```
+* Read my blogpost here: https://www.learning-at-farm.com/create-your-own-spring-boot-auto-configuration/
