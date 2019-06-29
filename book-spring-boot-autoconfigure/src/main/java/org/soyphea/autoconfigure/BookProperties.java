@@ -3,6 +3,7 @@ package org.soyphea.autoconfigure;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
 @ConfigurationProperties(prefix = "book.service")
+//@ConditionalOnProperty(prefix = "book.service")
 public class BookProperties {
 
     private String title;
